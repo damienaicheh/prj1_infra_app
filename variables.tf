@@ -51,3 +51,9 @@ variable "storage_account_container_name" {
   type        = string
   description = "The storage account container name to retreive the other states from"
 }
+
+variable "tags" {
+  type        = map(any)
+  description = "The custom tags for all resources"
+  default     = {}
+}

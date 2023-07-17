@@ -4,5 +4,15 @@ locals {
 
   paas_subnet_id        = data.terraform_remote_state.network.outputs.paas_subnet_id
   app_service_subnet_id = data.terraform_remote_state.network.outputs.app_service_subnet_id
+
+  tags = merge(
+    var.tags,
+    tomap(
+      {
+        "Environment" = var.environment,
+        "Domain"      = var.domain,
+      }
+    )
+  )
 }
 
