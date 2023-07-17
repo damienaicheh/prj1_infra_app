@@ -2,9 +2,9 @@ name: Deploy Terraform with SPN
 
 on: # The trigger configuration can be customized as needed.
   workflow_dispatch:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
 env:
   ACTIONS_RUNNER_DEBUG: true
@@ -13,12 +13,6 @@ env:
   ARM_SUBSCRIPTION_ID: "${{ secrets.ARM_SUBSCRIPTION_ID }}"
   ARM_TENANT_ID: "${{ secrets.ARM_TENANT_ID }}"
   TF_LOG: INFO
-
-# permissions:
-#   id-token: write
-#   issues: write
-#   pull-requests: write
-#   contents: read
 
 jobs:
   preview:

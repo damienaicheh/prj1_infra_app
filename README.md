@@ -24,3 +24,17 @@ ARM_SUBSCRIPTION_ID
 ARM_TENANT_ID
 ```
 
+## With OIDC
+
+- Create an application registration
+- Add federated credentials inside secrets and credentials
+- Choose GitHub action and select the owner / repository. You can specify a branch but the best approach is to specify an environment which exist inside your GitHub repository.
+- Add Storage Blob Data Owner role on the storage account to your application registration
+
+On the GitHub repository add the credentials:
+
+```bash
+ARM_CLIENT_ID => The App Registration one
+ARM_SUBSCRIPTION_ID
+ARM_TENANT_ID
+```
