@@ -2,9 +2,9 @@ name: Deploy Terraform with SPN
 
 on: # The trigger configuration can be customized as needed.
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
 
 env:
   ACTIONS_RUNNER_DEBUG: true
