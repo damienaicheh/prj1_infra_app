@@ -11,6 +11,7 @@ locals {
       {
         "Environment" = var.environment,
         "Domain"      = var.domain,
+        "Application" = var.application,
       }
     )
   )
